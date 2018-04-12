@@ -5,6 +5,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 mongoose-tiny-4.1.exe
+*.mongoose-tiny-4.1.exe
 
 # Runtime data
 pids
