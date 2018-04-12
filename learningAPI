@@ -1498,4 +1498,50 @@ class StoryBox extends React.Component {
                   </div>
                 );
               }
-            }      
+            }  
+-----------------------------------------------------------------------------------------
+
+1. First - Example App
+  A.
+  B. Determine the heirechy of your app
+  C. This will start the rendering process to link the top level component to an existing
+     DOM node and popolute that DOM node.
+  4. Here the rendering means linking it to a DOM element and popolutating the 
+     DOM element using renderComponent.
+  5. This render component requires 2 arguments, the first is the JSX expresssion that defines the react component
+     ,the second argument is the existing DOM element to bond the component to
+  6. example 
+       var Hello = React.createClass({
+         return <div>
+                <h4> Hello my time is {this.props.now} </h4>
+                </div>
+       });
+
+
+      React.renderComponent (                     -----> Consider this as controller which will pass data to Hello component and data is inside {}.
+        <Hello now = {new Date().toString()} />   -----> First argument
+        document.body                             -----> Second argument
+      ) 
+  7. Now in app.js we will add some components to quiz component as we choose quiz
+     as our outer component.
+  8. react-example
+      thirdparty
+      js
+      index.html
+  9. js/app.js 
+       (function() {
+         'use strict';
+
+          var Quiz = React.createClass({
+           render: function() {
+            return <div>test 
+                   </div>;
+          }
+      });
+
+      React.renderComponent(<Quiz data={'foo'} />,
+        document.getElementById('app'));
+      })();
+      And add div with app as id in index.html
+  10. Now there will be some errors in jsx as no servers are running, hence we can use mongoose http server            
+
