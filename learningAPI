@@ -1543,5 +1543,45 @@ class StoryBox extends React.Component {
         document.getElementById('app'));
       })();
       And add div with app as id in index.html
-  10. Now there will be some errors in jsx as no servers are running, hence we can use mongoose http server            
+  10. Now there will be some errors in jsx as no servers are running, hence we can use mongoose http server
+  11. From renderComponent we can pass double arguments, Exampple - 
 
+      var Hello = React.createClass({
+         return <div>
+                <h4> Hello my time is {this.props.now} {''} and date is  {this.props.b}  </h4>
+                </div>
+       });
+
+
+      React.renderComponent (                     -----> Consider this as controller which will pass data to Hello component and data is inside {}.
+        <Hello now = {new Date().toString()} b='06' />   -----> First argument
+        document.body                             -----> Second argument
+      )           
+  12. Nested Component
+      One react component can be nested inside another component. Ex - 
+      
+       var Inner = React.createClass({
+        render: function() {
+          return 
+           <div>
+             <h2>Inner</h2>
+           </div>
+        }
+       });
+
+       var Outer = React.createClass({
+        render: function() {
+          return 
+           <div>
+             <h3>Outer is here</h3>
+             <h2> <Inner /> </h2>
+           </div>
+        }
+       });
+
+
+      React.renderComponent (                     
+        <Outer />,
+        document.body
+
+      )           
