@@ -1635,4 +1635,35 @@ For online we can use jscomplete.com to test the code.*/
      React.render(
       <Count />, 
       document.body
-    );               
+    );
+
+  15. Modules
+     There are 3 ways of export modules in react 
+     A. single default export
+        A.1 Component
+            class App extends React.component(
+            );
+
+            export default App;
+        A.2 Principal file
+             import App from './components/App';
+
+     B. curly base export
+       B.1 Component
+            class App extends React.component(
+            );
+
+            export App;
+       B.2 Principal file
+            import {App} from './components/App'; 
+     C. Class and const export
+       C.1 Component
+           class App extends React.component(
+            );
+           const x = 10;
+
+           export default App, x;
+       C.2 Principal file
+            import App, {x} from './components/App'; 
+
+  16.                       
