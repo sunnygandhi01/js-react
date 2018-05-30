@@ -1,0 +1,26 @@
+.subtitle {
+    font-style: italic;
+    font-size: x-large;
+    color: red;
+}
+
+.featuredHouse {
+    border-radius: 2px;
+    background-color: rgb(254, 255, 166);
+}
+
+.Nav {
+    background-color: #ffffff;
+    padding: 10px;
+    color: white;
+}
+
+.Nav-logo-div {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.Nav-logo {
+    width: 150px;
+    margin-left: 10px;
+}
